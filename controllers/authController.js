@@ -49,9 +49,9 @@ router.post("/login", async (req, res) => {
       if (result) {
         req.session.userId = userToLogin._id;
         req.session.name = userToLogin.name;
-        res.send("you are logged in");
+        res.json("you are logged in");
       } else {
-        res.send("Wrong password");
+        res.json("Wrong password");
       }
     });
   }

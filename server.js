@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 5300;
 const authController = require("./controllers/authController");
+const serviceController = require("./controllers/serviceController");
 const session = require("express-session");
 
 
@@ -19,6 +20,7 @@ app.use(morgan("tiny"));
 app.use(cors());
 
 app.use("/user", authController);
+app.use("/services", serviceController);
 
 
 app.get("/", (req, res) => {

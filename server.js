@@ -20,7 +20,7 @@ app.use(morgan("tiny"));
 app.use(cors());
 
 app.use("/user", authController);
-app.use("/services", serviceController);
+app.use("/service", serviceController);
 
 
 app.get("/", (req, res) => {
